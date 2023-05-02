@@ -2,125 +2,38 @@
 
 <html>
 
-  <head>
+<head>
 
-    <title>Translator</title>
+	<meta charset="UTF-8">	<title>සිංහල to කොස් Translator</title>
 
-    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-    <style>
+<body>
 
-      body {
+	<h1>සිංහල To කොස් Translator</h1>
 
-        font-family: Arial, sans-serif;
+	<div>
 
-      }
+		<label for="input-text">Enter text to translate:</label>
 
-      label {
+		<textarea id="input-text"></textarea>
 
-        display: block;
+	</div>
 
-        margin-bottom: 10px;
+	<div>
 
-        font-weight: bold;
+		<label for="output-text">Translated text:</label>
 
-      }
+		<textarea id="output-text" readonly></textarea>
 
-      textarea {
+	</div>
 
-        width: 100%;
+	<button id="translate-btn">Translate</button>
 
-        height: 150px;
+	<script src="script.js"></script>
 
-        margin-bottom: 10px;
-
-        padding: 10px;
-
-        font-size: 16px;
-
-        border: 1px solid #ccc;
-
-        border-radius: 4px;
-
-        resize: vertical;
-
-      }
-
-      button {
-
-        padding: 10px 20px;
-
-        font-size: 16px;
-
-        border: none;
-
-        border-radius: 4px;
-
-        background-color: #4CAF50;
-
-        color: #fff;
-
-        cursor: pointer;
-
-      }
-
-      button:hover {
-
-        background-color: #3e8e41;
-
-      }
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <h1>Translator</h1>
-
-    <label for="input">Input Text:</label>
-
-    <textarea id="input" placeholder="Enter text to translate..."></textarea>
-
-    <button onclick="translate()">Translate</button>
-
-    <label for="output">Output Text:</label>
-
-    <textarea id="output" placeholder="Translated text will appear here..." readonly></textarea>
-
-    <script>
-
-      function translate() {
-
-        const inputText = document.getElementById("input").value;
-
-        const words = inputText.split(" ");
-
-        let outputText = "";
-
-        for (let i = 0; i < words.length; i++) {
-
-          let word = words[i];
-
-          if (word.length >= 2) {
-
-            word = word.slice(0, 1) + "ස්කො" + word.slice(1);
-
-          }
-
-          outputText += word + " ";
-
-        }
-
-        document.getElementById("output").value = outputText.trim();
-
-      }
-
-    </script>
-
-  </body>
+</body>
 
 </html>
-
