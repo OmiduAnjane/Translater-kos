@@ -1,35 +1,42 @@
-const inputText = document.getElementById('input-text');
+const inputTextarea = document.getElementById('input-text');
 
-const outputText = document.getElementById('output-text');
+const outputTextarea = document.getElementById('output-text');
 
 const translateBtn = document.getElementById('translate-btn');
 
 translateBtn.addEventListener('click', () => {
 
-	const input = inputText.value.trim();	if (input) {
+  const inputText = inputTextarea.value.trim();
 
-		const output = input
+  if (inputText === '') {
 
-			.split(' ')
+    return;
 
-			.map(word => {
+  }
 
-				if (word.length > 1) {
+  const outputText = inputText
 
-					return word.charAt(0) + 'ස්කො' + word.slice(2);
+    .split(' ')
 
-				} else {
+    .map((word) => {
 
-					return word;
+      if (word.length > 1) {
 
-				}
+        const firstLetter = word.charAt(0);
 
-			})
+        const restOfWord = word.slice(1);
 
-			.join(' ');
+        return `${firstLetter}ස්කො${restOfWord}`;
 
-		outputText.value = output;
+      }
 
-	}
+      return word;
+
+    })
+
+    .join(' ');
+
+  outputTextarea.value = outputText;
 
 });
+
