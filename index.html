@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>කොස් Translator</title>
+
+  <style>
+
+    #input {
+
+      width: 400px;
+
+      height: 100px;
+
+      margin: 20px;
+
+    }
+
+    #output {
+
+      width: 400px;
+
+      height: 100px;
+
+      margin: 20px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>සිංහල to කොස්</h1>
+
+  <textarea id="input"></textarea>
+
+  <button onclick="translate()">Translate</button>
+
+  <br>
+
+  <textarea id="output"></textarea>
+
+  <script>
+
+    function translate() {
+
+      const input = document.getElementById('input').value;
+
+      const words = input.split(' ');
+
+      const translatedWords = words.map(word => {
+
+        const secondLetter = word.charAt(1);
+
+        return word.charAt(0) + 'ස්කො' + secondLetter + word.slice(2);
+
+      });
+
+      const output = translatedWords.join(' ');
+
+      document.getElementById('output').value = output;
+
+    }
+
+  </script>
+
+</body>
+
+</html>
