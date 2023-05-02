@@ -28,7 +28,7 @@ translateBtn.addEventListener('click', () => {
 
         const restOfWord = word.slice(1);
 
-        return `${firstLetter}${secondLetter}ස්කො${restOfWord}`;
+        return `${secondLetter}ස්කො${restOfWord}`;
 
       }
 
