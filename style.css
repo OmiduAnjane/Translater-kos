@@ -1,61 +1,104 @@
-body {
+* {
 
-	font-family: Arial, sans-serif;}
-
-h1 {
-
-	text-align: center;
+  box-sizing: border-box;
 
 }
 
-div {
+body {
 
-	margin-bottom: 10px;
+  font-family: sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.container {
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding: 20px;
+
+}
+
+h1 {
+
+  text-align: center;
+
+}
+
+.input-container,
+
+.output-container {
+
+  margin-bottom: 20px;
 
 }
 
 label {
 
-	display: block;
+  display: block;
 
-	margin-bottom: 5px;
+  font-weight: bold;
+
+  margin-bottom: 5px;
 
 }
 
 textarea {
 
-	display: block;
+  width: 100%;
 
-	width: 100%;
+  min-height: 150px;
 
-	height: 105px;
+  padding: 10px;
 
-	padding: 5px;
+  border: 1px solid #ccc;
 
-	border: 1px solid #ccc;
+  border-radius: 5px;
 
-	resize: vertical;
+  resize: none;
 
 }
 
 button {
 
-	display: block;
+  display: block;
 
-	margin: 10px auto;
+  margin: 0 auto;
 
-	padding: 10px 20px;
+  padding: 10px 20px;
 
-	background-color: #0077ff;
+  background-color: #4caf50;
 
-	color: #fff;
+  color: #fff;
 
-	border: none;
+  border: none;
 
-	border-radius: 5px;
+  border-radius: 5px;
 
-	font-size: 16px;
+  cursor: pointer;
 
-	cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 
 }
+
+button:hover {
+
+  background-color: #388e3c;
+
+}
+
+@media (max-width: 480px) {
+
+  textarea {
+
+    min-height: 100px;
+
+  }
+
+}
+
