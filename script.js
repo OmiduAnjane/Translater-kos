@@ -23,10 +23,12 @@ translateBtn.addEventListener('click', () => {
       if (word.length > 1) {
 
         const firstLetter = word.charAt(0);
+        
+        const secondLetter = word.charAt(1);
 
         const restOfWord = word.slice(1);
 
-        return `${firstLetter}ස්කො${restOfWord}`;
+        return `${firstLetter}${secondLetter}ස්කො${restOfWord}`;
 
       }
 
